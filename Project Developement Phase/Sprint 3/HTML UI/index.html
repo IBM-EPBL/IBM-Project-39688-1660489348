@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        span{
+            background-color:ivory;
+            color: black;
+            text-decoration-line: none;
+        }
+        #label{
+            height: 40px;
+            width: 100%;
+            border: 2px solid;
+            border-radius: 10px;
+            background-color: rgb(227, 234, 235);
+        }
+        #label2{
+            padding-top: .2cm;
+            /*padding-right: ;*/ padding-bottom: .5cm;
+            padding-left: 1000px;
+            font-size: .7cm;
+        }
+        span{
+            padding-right: 1cm;
+            background-color: transparent;
+        }
+        body {
+            background-color: black;
+        } 
+        a{
+            text-decoration: none;
+        }
+        p{
+            color: white;
+        }
+        h1{
+            color: aliceblue; font-size: 1cm;
+            padding-top: 1cm; font-size: .7cm;
+            text-align: center; color: white;
+            font-style: italic;
+        }
+        #body{
+            text-align: center;
+            width: 50%;
+            float: left;
+
+        }
+        #body2{
+            width: 40%;
+            float: right;
+        }
+
+   </style>
+</head>
+<body>
+    <div id="label"> <div id="label2"><span><a href="/">Home</a></span><span><a href="/prediction">Predict</a> </span></div></div>
+    <div id="body" >
+        <h1>Detect if your plant is infected!!</h1>
+    <p>Agriculture is one of the major sectors world wide over the<br>
+        years it has developed and the use of new technologies and equipment replaced almost all the traditional <br> 
+    methods of farming.The plant diseases effect the production.Identification of diseases<br>
+ and taking necessary precautions is all done through naked eye,which requires labour and laboratries.<br>
+ This application helps farmers in detecting the diseases by observing the sports on the leaves,<br>
+ which in turn saves effort and labor costs</style></p></div>
+ <div id="body2">
+    <img src="{{url_for('static', filename='plant.jpg')}}" alt="">
+ </div>
+</body>
+</html>

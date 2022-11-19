@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction</title>
+    <style>
+        span{
+            background-color:ivory;
+            color: black;
+            text-decoration-line: none;
+        }
+        h2{
+            color: red;
+            font-size: 1cm;
+        }
+        #label{
+            height: 40px;
+            width: 100%;
+            border: 2px solid;
+            border-radius: 10px;
+            background-color: rgb(227, 234, 235);
+        }
+        #label2{
+            padding-top: .2cm;
+            /*padding-right: ;*/ padding-bottom: .5cm;
+            padding-left: 1000px;
+            font-size: .7cm;
+        }
+        span{
+            padding-right: 1cm;
+            background-color: transparent;
+        }
+        a{
+            text-decoration: none;
+        }
+        p{
+            color: white;
+        }
+        h1{
+            color: aliceblue; 
+            font-size: 1cm;
+            padding-top: 1cm;
+             font-size: .7cm;
+            text-align: center;
+             color: white;
+            font-style: italic;
+        }
+        #body1{
+            background-color: white;
+            width: 50%;
+            height: auto;
+            float: left;
+        }
+        #body2{
+            height: 100%;
+            background-color: white;
+            width: 40%;
+            height: auto;
+            float: right;
+            text-align: center;
+        }
+
+        #l2,#img{
+            border-radius: 20%;
+            padding: 1%;
+            margin-top: 2cm;
+            background-color: greenyellow;
+            color: black;
+            font-size: .6cm;
+        }
+        #select{
+            margin-top: 2cm;
+            margin-bottom: 2cm;
+        }
+        form{
+            padding: auto;
+        }
+
+        #l1{
+            margin-top: 12cm;
+            color: black;
+            font-size: .8cm;
+        }
+        input{
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="label"> <div id="label2"><span><a href="/">Home</a></span><span><a href="/prediction">Predict</a> </span></div></div>
+
+    <div id="body1"><img src="{{url_for('static', filename='prediction.png')}}" alt=""></div>
+    <div id="body2" >
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <label id="l1">Drop in the image to get the Prediction</label><br>
+
+            <select name="select" id="select" aria-placeholder="select"><br>
+                <option value="veg">Vegetable</option>
+                <option value="frt">Fruit</option>
+            </select><br>
+
+            <label id="l2" for="file">Choose...</label>
+                <input type="file" name="file" id="file" hidden><br>
+                <br>
+                <h2>{{ data }}</h2>
+            <br>
+        <img src="data:image/png;base64,{{show}}" id="imgpic" alt="" srcset=""{{h}}>
+            <br><input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
